@@ -906,10 +906,10 @@
 
         function createMaterialsAndMeshes() {
             // 降低自发光强度，配合 Bloom 调整
-            const goldMat = new THREE.MeshPhysicalMaterial({ color: 0xffb3d9, metalness: 0.3, roughness: 0.3, clearcoat: 0.5, emissive: 0xff99cc, emissiveIntensity: 0.5, transparent: true, opacity: 1 });
-            const silverMat = new THREE.MeshPhysicalMaterial({ color: 0xb3e5d9, metalness: 0.2, roughness: 0.3, transmission: 0.1, emissive: 0x99d9cc, emissiveIntensity: 0.3, transparent: true, opacity: 1 }); 
-            const gemMat = new THREE.MeshPhysicalMaterial({ color: 0xd9b3ff, metalness: 0.1, roughness: 0.2, transmission: 0.5, thickness: 1.5, emissive: 0xcc99ff, emissiveIntensity: 0.5, transparent: true, opacity: 1 }); 
-            const emeraldMat = new THREE.MeshPhysicalMaterial({ color: 0xffd9b3, metalness: 0.2, roughness: 0.3, transmission: 0.3, thickness: 1.0, emissive: 0xffcc99, emissiveIntensity: 0.4, transparent: true, opacity: 1 }); 
+            const goldMat = new THREE.MeshPhysicalMaterial({ color: 0xff80c0, metalness: 0.5, roughness: 0.2, clearcoat: 0.8, emissive: 0xff66b3, emissiveIntensity: 1.2, transparent: true, opacity: 1 });
+            const silverMat = new THREE.MeshPhysicalMaterial({ color: 0x80e6cc, metalness: 0.4, roughness: 0.2, transmission: 0.15, emissive: 0x66d9bf, emissiveIntensity: 0.8, transparent: true, opacity: 1 }); 
+            const gemMat = new THREE.MeshPhysicalMaterial({ color: 0xc080ff, metalness: 0.3, roughness: 0.1, transmission: 0.6, thickness: 2.0, emissive: 0xb366ff, emissiveIntensity: 1.0, transparent: true, opacity: 1 }); 
+            const emeraldMat = new THREE.MeshPhysicalMaterial({ color: 0xffb380, metalness: 0.4, roughness: 0.2, transmission: 0.4, thickness: 1.5, emissive: 0xffa366, emissiveIntensity: 0.9, transparent: true, opacity: 1 }); 
 
             // 收集材质引用
             cakeMaterials.push(goldMat, silverMat, gemMat, emeraldMat);
@@ -920,7 +920,7 @@
             emeraldMesh = createInstancedMesh(new THREE.ConeGeometry(0.5, 1.2, 8), emeraldMat, CONFIG.emeraldCount, logicData.emerald);
 
             const starGeo = createStarGeometry(); starGeo.center();
-            const starMat = new THREE.MeshPhysicalMaterial({ color: 0xfff0b3, metalness: 0.5, roughness: 0.2, emissive: 0xffe680, emissiveIntensity: 1.5, transparent: true, opacity: 1 });
+            const starMat = new THREE.MeshPhysicalMaterial({ color: 0xffeb3b, metalness: 0.7, roughness: 0.1, emissive: 0xffd700, emissiveIntensity: 2.0, transparent: true, opacity: 1 });
             const star = new THREE.Mesh(starGeo, starMat);
             cakeMaterials.push(starMat);
 
