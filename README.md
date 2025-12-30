@@ -1,4 +1,4 @@
-# 2026 Golden Splendor - 新年粒子手势交互
+# Happy New Year - 新年粒子手势交互
 
 ## 项目描述
 
